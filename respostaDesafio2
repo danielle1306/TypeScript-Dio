@@ -1,0 +1,51 @@
+//DESAFIO: MELHORE O CÓDIGO ABAIXO:
+let pessoa1 = {};
+pessoa1.nome = 'Maria';
+pessoa1.idade = 29;
+pessoa1.profissao = 'atriz';
+
+let pessoa2 = {};
+pessoa2.nome = 'Roberto';
+pessoa2.idade = 19;
+pessoa2.profissao = 'Padeiro';
+
+let pessoa3= {
+    pessoa3: 'Laura'
+    pessoa3: 32
+    pessoa3 'atriz'
+
+};
+
+let pessoa4 = {
+    pessoa4 = 'Carlos',
+    pessoa4 = 19,
+    pessoa4 = padeiro
+
+};
+
+//Melhorando o código
+
+enum Trabalho { /*o enum permite declarar um conj de valores pré-definidos, no caso, trabalho*/
+    Atriz,
+    Padeiro
+}
+
+type Humano = { /* em type, declaramos explicitamente o tipo de dado que aceitamos para cada elemento*/
+    nome: String,
+    idade: Number,
+    profissao: Trabalho
+    
+}
+
+let pessoa1: Humano = { /*agora podemos construir variáveis que utilizarão os dados fornecidos e obedecerão ao tipo designado para cada um*/
+    nome: 'Maria',
+    idade: 19,
+    profissao: Trabalho.Atriz  /*aqui podemos utilizar o que foi pré definido no enum trabalho*/
+};
+
+let pessoa2: Humano = {
+    nome: 'Roberto',
+    idade: 30,
+    profissao: Trabalho.Padeiro
+};
+

@@ -1,0 +1,41 @@
+// Como podemos rodar isso em um arquivo .ts sem causar erros? 
+
+let employee = {};
+employee.code = 10;
+employee.name = "John";
+
+//respostas possíveis
+
+//resposta 1
+
+let funcionario1 = {
+    codigo: 10
+    nome: 'joão'
+/*dessa forma o TS terá que subentender os tipos.
+ dá certo, mas em alguns casos é melhor explicitar. E continua funcionando se mudar o tipo de dado */
+};
+
+//resposta 2 - tipo explícito
+let funcionario2: {codigo: number, nome: string} = {
+    codigo: 10,
+    nome: 'Joao'
+    /*dessa forma eu explicito para o TS qual é o tipo do obj.
+     Mas se não for colocado o tipo certo, vai dar erro*/
+};
+
+//resposta 3 - usando interface
+
+interface Funcionario3 {
+    codigo: Number,
+    nome: string
+}
+Funcionario3: Funcionario = {
+    codigo: 200,
+    nome: 'Joao'
+};
+//resposta 4 - declarando funcionario como um objeto
+
+const funcionario5 = () as funcionario,
+funcionario5.codigo = 180,
+funcionario5.name = 'Joao'
+
